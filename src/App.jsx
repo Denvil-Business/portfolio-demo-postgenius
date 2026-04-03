@@ -10,17 +10,16 @@ const EXAMPLE_ICONS = ['💼', '🧠', '😂']
 function LangSwitcher() {
   const { lang, setLang } = useLanguage()
   return (
-    <div className="flex items-center gap-1 text-xs font-semibold tracking-widest">
+    <div className="flex items-center rounded-md border border-linkedin/30 overflow-hidden text-xs font-semibold">
       <button
         onClick={() => setLang('fr')}
-        className={`px-1 transition-colors ${lang === 'fr' ? 'text-linkedin' : 'text-text-muted hover:text-linkedin'}`}
+        className={`px-2.5 py-1 transition-colors ${lang === 'fr' ? 'bg-linkedin text-white' : 'text-text-secondary hover:text-linkedin'}`}
       >
         FR
       </button>
-      <span className="text-border">|</span>
       <button
         onClick={() => setLang('en')}
-        className={`px-1 transition-colors ${lang === 'en' ? 'text-linkedin' : 'text-text-muted hover:text-linkedin'}`}
+        className={`px-2.5 py-1 transition-colors ${lang === 'en' ? 'bg-linkedin text-white' : 'text-text-secondary hover:text-linkedin'}`}
       >
         EN
       </button>
